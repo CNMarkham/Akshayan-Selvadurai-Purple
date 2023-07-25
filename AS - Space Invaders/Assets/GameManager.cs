@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     public float xSpace;
     public float xOffset;
-    // Update is called once per frame
+
     void Start()
     {
 
@@ -19,4 +19,6 @@ public class GameManager : MonoBehaviour
             Instantiate(enemyPrefab, new Vector2(x * xSpace + xOffset, 6f), Quaternion.identity);
         }
     }
+    // Update is called once per frame
+
 }

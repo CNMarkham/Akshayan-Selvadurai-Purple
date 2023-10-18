@@ -11,18 +11,22 @@ public class Node : MonoBehaviour
     {
         availableDirections = new List<Vector2>();
 
-        CheckAvailableDirection(Vector2.down);
+        
         CheckAvailableDirection(Vector2.up);
+        CheckAvailableDirection(Vector2.down);
         CheckAvailableDirection(Vector2.left);
         CheckAvailableDirection(Vector2.right);
     }
 
     private void CheckAvailableDirection(Vector2 newDirection)
     {
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 0.75f, 0f, newDirection, 1.5f, obstacleLayer);
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 0.75f, 0f, newDirection, 1f, obstacleLayer);
+        //Gizmos.color = new Color(1, 0, 0, 0.5f);
+        //Gizmos.DrawCube(transform.position, Vector2.one * 0.75f);
 
         if (hit.collider == null)
         {
+            print("Direction added!");
             availableDirections.Add(newDirection);
         }
     }

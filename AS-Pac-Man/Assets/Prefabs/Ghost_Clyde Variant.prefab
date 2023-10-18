@@ -7,9 +7,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8553147569244033987, guid: 0cef5bb0b5ca7094f9384771719bab14, type: 3}
+      propertyPath: atHome
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8553147569244033987, guid: 0cef5bb0b5ca7094f9384771719bab14, type: 3}
+      propertyPath: homeDuration
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: -8553147569244033987, guid: 0cef5bb0b5ca7094f9384771719bab14, type: 3}
+      propertyPath: initialDirection.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3818004628186498224, guid: 0cef5bb0b5ca7094f9384771719bab14, type: 3}
       propertyPath: m_Name
-      value: Ghost_Clyde
+      value: Ghost_Clyde Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3818004628186498227, guid: 0cef5bb0b5ca7094f9384771719bab14, type: 3}
       propertyPath: m_RootOrder

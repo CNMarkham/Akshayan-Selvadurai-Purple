@@ -72,9 +72,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.023760438, y: -0.014256179}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.09132278
 --- !u!114 &-8553147569244033987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,6 +87,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbbea18982d6f046aae1a9f701ffed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  initialDirection: {x: 0, y: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  body: {fileID: 3818004629935307750}
+  eyes: {fileID: 3818004628945452154}
+  blue: {fileID: 3818004629287196745}
+  white: {fileID: 3818004630032485530}
+  atHome: 0
+  homeDuration: 0
 --- !u!1 &3818004628945452154
 GameObject:
   m_ObjectHideFlags: 0

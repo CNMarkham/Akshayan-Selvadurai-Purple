@@ -9911,12 +9911,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 261703680989200242, guid: 73844cd35faf1c348b614f81ec3ce2a4, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 261703680989200242, guid: 73844cd35faf1c348b614f81ec3ce2a4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261703680989200242, guid: 73844cd35faf1c348b614f81ec3ce2a4, type: 3}
       propertyPath: initialDirection.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 261703680989200242, guid: 73844cd35faf1c348b614f81ec3ce2a4, type: 3}
       propertyPath: obstacleLayer.m_Bits
-      value: 128
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4472243193733830652, guid: 73844cd35faf1c348b614f81ec3ce2a4, type: 3}
       propertyPath: m_RootOrder
@@ -10024,6 +10032,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2956237157998369845, guid: c39210675298aeb49aa5e15f120d7906, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956237157998369845, guid: c39210675298aeb49aa5e15f120d7906, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956237157998369845, guid: c39210675298aeb49aa5e15f120d7906, type: 3}
       propertyPath: initialDirection.y
       value: -1
       objectReference: {fileID: 0}
@@ -10085,6 +10101,18 @@ PrefabInstance:
       value: Ghost_Clyde
       objectReference: {fileID: 0}
     - target: {fileID: 7097497094620177139, guid: c6bf4eb7635013248a83ca838b165272, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097497094620177139, guid: c6bf4eb7635013248a83ca838b165272, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097497094620177139, guid: c6bf4eb7635013248a83ca838b165272, type: 3}
+      propertyPath: homeDuration
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097497094620177139, guid: c6bf4eb7635013248a83ca838b165272, type: 3}
       propertyPath: initialDirection.y
       value: -1
       objectReference: {fileID: 0}
@@ -10099,10 +10127,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6845304864868975683, guid: 6066e518fd4c4814b9cfce1d60ab6b6c, type: 3}
       propertyPath: speed
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6845304864868975683, guid: 6066e518fd4c4814b9cfce1d60ab6b6c, type: 3}
       propertyPath: atHome
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845304864868975683, guid: 6066e518fd4c4814b9cfce1d60ab6b6c, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6845304864868975683, guid: 6066e518fd4c4814b9cfce1d60ab6b6c, type: 3}

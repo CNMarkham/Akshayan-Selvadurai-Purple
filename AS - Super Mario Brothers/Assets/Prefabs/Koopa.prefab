@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1752222837817745675}
   - component: {fileID: 1161552979407703583}
   - component: {fileID: 4940400334371937806}
+  - component: {fileID: 1057307473965691617}
   m_Layer: 8
   m_Name: Koopa
   m_TagString: Untagged
@@ -123,3 +124,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.25}
   serializedVersion: 2
   m_Radius: 0.0001
+--- !u!95 &1057307473965691617
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7608564164439696767}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb356c9372b56d64f97be12ac316d1ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

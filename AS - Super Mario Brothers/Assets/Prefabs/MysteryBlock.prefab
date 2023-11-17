@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8726353223408196391}
   - component: {fileID: 4818699894298247658}
+  - component: {fileID: 3224536317514814456}
   m_Layer: 0
   m_Name: MysteryBlock
   m_TagString: Untagged
@@ -59,6 +60,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &3224536317514814456
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796183406461533156}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8cda69b16389a0146a0a8c3fdc523c07, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5436681168670014570
 GameObject:
   m_ObjectHideFlags: 0

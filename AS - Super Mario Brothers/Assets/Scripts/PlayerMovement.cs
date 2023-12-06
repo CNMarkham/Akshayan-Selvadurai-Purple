@@ -22,12 +22,16 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
-
+        Debug.Log(horizontal);  
         rb.AddForce(Vector2.right * horizontal * moveSpeed * Time.deltaTime);
 
         Jump();
-    }
+        ChangeAnimations();
+        FlipDirection();
 
+
+
+    }
     private void Jump()
     {
         hit = Physics2D.CircleCast(rb.position, 0.25f, Vector2.down, 0.375f, LayerMask.GetMask("Default"));
@@ -41,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
             Invoke("ResetJumping", 0.5f);
         }
 
-      
+
 
         if (jumping && Input.GetKey(KeyCode.W))
         {
@@ -55,4 +59,26 @@ public class PlayerMovement : MonoBehaviour
     {
         jumping = false;
     }
+
+
+
+private void FlipDirection()
+    {
+        foreach (SpriteRenderer sprite in GetComponentsInChildren<SpriteRenderer>())
+        {
+            sprite.flipX = rb.velocity.x < 0;
+        }
+    }
+
+    private void ChangeAnimations()
+    {
+        foreach (Animator animator in GetComponentsInChildren<Animator>())
+        {
+            animator.SetFloat("velocityX", rb.velocity.x);
+            animator.SetFloat("horizontalInput", Input.GetAxis("Horizontal"));
+            animator.SetBool("inAir", hit.collider == null || jumping);
+        }
+    }
 }
+
+

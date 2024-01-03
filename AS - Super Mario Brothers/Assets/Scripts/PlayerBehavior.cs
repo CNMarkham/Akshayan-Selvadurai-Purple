@@ -85,6 +85,9 @@ public class PlayerBehavior : MonoBehaviour
             yield return new WaitForSeconds(0.25f);
 
         }
+        GetComponent<PlayerMovement>().enabled = true;
+        GetComponent<CapsuleCollider2D>().enabled = true;
+        rb.isKinematic = false;
     }
 
 }

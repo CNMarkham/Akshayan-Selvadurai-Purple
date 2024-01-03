@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
-        Debug.Log(horizontal);  
+        Debug.Log(horizontal);
         rb.AddForce(Vector2.right * horizontal * moveSpeed * Time.deltaTime);
 
         Jump();
@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-private void FlipDirection()
+    private void FlipDirection()
     {
         foreach (SpriteRenderer sprite in GetComponentsInChildren<SpriteRenderer>())
         {
@@ -74,38 +74,39 @@ private void FlipDirection()
     {
         foreach (Animator animator in GetComponentsInChildren<Animator>())
         {
-            animator.SetFloat("velocityX", rb.velocity.x);
-            animator.SetFloat("horizontalInput", Input.GetAxis("Horizontal"));
-            animator.SetBool("inAir", hit.collider == null || jumping);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        float distance = 0.375f;
-
-        if (GetComponent<PlayerBehavior>().big)
-        {
-            distance += 1f;
-        }
-
-        RaycastHit2D hitTop = Physics2D.CircleCast(rb.position, 0.25f, Vector2.up, distance, LayerMask.GetMask("Default"));
-
-        if (hitTop.collider != null)
-        {
-            Vector3 velocity = rb.velocity;
-            velocity.y = 0;
-            rb.velocity = velocity;
-            jumping = false;
-
-
-            BlockHit blockHit = hitTop.collider.gameObject.GetComponent<BlockHit>();
-            if (blockHit != null)
             {
-                blockHit.Hit();
+                animator.SetFloat("velocityX", rb.velocity.x);
+                animator.SetFloat("horizontalInput", Input.GetAxis("Horizontal"));
+                animator.SetBool("inAir", hit.collider == null || jumping);
             }
         }
     }
-}
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            float distance = 0.375f;
 
+            if (GetComponent<PlayerBehavior>().big)
+            {
+                distance += 1f;
+            }
+
+            RaycastHit2D hitTop = Physics2D.CircleCast(rb.position, 0.25f, Vector2.up, distance, LayerMask.GetMask("Default"));
+
+            if (hitTop.collider != null)
+            {
+                Vector3 velocity = rb.velocity;
+                velocity.y = 0;
+                rb.velocity = velocity;
+                jumping = false;
+
+
+                BlockHit blockHit = hitTop.collider.gameObject.GetComponent<BlockHit>();
+                if (blockHit != null)
+                {
+                    blockHit.Hit();
+                }
+            }
+        }
+    
+}
 

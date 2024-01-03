@@ -22,7 +22,7 @@ public class BlockHit : MonoBehaviour
 
         if (item != null) 
         {
-            Instantiate(item, transform);
+            Instantiate(item, transform.position, Quaternion.identity);
         }
 
         animator.SetTrigger("hit");

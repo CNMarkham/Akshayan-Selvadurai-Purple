@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8726353223408196391}
   - component: {fileID: 4818699894298247658}
   - component: {fileID: 3224536317514814456}
+  - component: {fileID: 8952199531115311794}
   m_Layer: 0
   m_Name: MysteryBlock
   m_TagString: Untagged
@@ -73,13 +74,28 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 8cda69b16389a0146a0a8c3fdc523c07, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8952199531115311794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796183406461533156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f779bdea7b37202488ba883e4ff88579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  maxHits: 1
+  emptyBlock: {fileID: 21300000, guid: 15dc681d460533c48a1124f894db7b74, type: 3}
 --- !u!1 &5436681168670014570
 GameObject:
   m_ObjectHideFlags: 0

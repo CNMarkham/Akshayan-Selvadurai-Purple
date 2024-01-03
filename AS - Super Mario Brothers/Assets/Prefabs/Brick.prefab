@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8452535240342978883}
   - component: {fileID: -705817546898809006}
   - component: {fileID: -4322445744406929990}
+  - component: {fileID: -6882912571272869457}
   m_Layer: 0
   m_Name: Brick
   m_TagString: Untagged
@@ -157,10 +158,25 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 8cda69b16389a0146a0a8c3fdc523c07, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6882912571272869457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5608078734472793518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f779bdea7b37202488ba883e4ff88579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  maxHits: 1
+  emptyBlock: {fileID: 21300000, guid: 15dc681d460533c48a1124f894db7b74, type: 3}

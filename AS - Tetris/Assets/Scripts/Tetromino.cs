@@ -9,17 +9,31 @@ public class Tetromino : MonoBehaviour
     public float fallTime;
     public float width;
     public float height;
+    public Vector3 rotationPoint;
 
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Vector3 convertedPoint = transform.TransformPoint(rotationPoint);
+            transform.RotateAround(convertedPoint, Vector3.forward, 90);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Vector3 convertedPoint = transform.TransformPoint(rotationPoint);
+            transform.RotateAround(convertedPoint, Vector3.forward, -90);
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
         {
             transform.position = transform.position + Vector3.left * speed * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             transform.position = transform.position + Vector3.right * speed * Time.deltaTime;
         }
@@ -37,4 +51,25 @@ public class Tetromino : MonoBehaviour
             previousTime = Time.time;
         }
     }
+
+    public bool ValidMove()
+    {
+        foreach (Transform child in transform)
+        {
+            int x = Mathf.RoundToInt(child.transform.position.x);
+            int y = Mathf.RoundToInt(child.transform.position.y);
+            if (x < 0 || x >= width)
+            {
+                return false;
+            } 
+          
+            if (y < 0 || y >= height)
+            {
+                return false;
+            } 
+        }
+        return true;
+
+    }
+    
 }
